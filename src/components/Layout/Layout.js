@@ -1,18 +1,15 @@
 import React from 'react';
-import classes from './layout.scss';
 import { hot } from 'react-hot-loader';
-import SearchBox from './../SearchBox/SearchBox.js';
+import Top from './../Top/Top.js';
+import Gallery from './../Gallery/Gallery.js';
+import Queries from './../Queries/Queries.js';
 
 const Layout = () => {
-	console.log(classes);
 	return (
-		<div className={classes.Container}>
-			<div className={classes.Search}>
-				<SearchBox />
-			</div>
-			<div className={classes.Gallery}>Gallery</div>
-			<div className={classes.Controls}>Controls</div>
-			<div className={classes.Queries}>Queries</div>
+		<div className="grid-container">
+			<Top />
+			<Gallery />
+			<Queries />
 		</div>
 	);
 };

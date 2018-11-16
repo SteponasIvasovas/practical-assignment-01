@@ -1,13 +1,15 @@
 .SearchBox {
-	height: 100%;
+	nav {
+		height: 100%;
+	}
 
 	i,
 	label {
-		display: flex !important;
-		align-items: center !important;
-		height: 100% !important;
+		display: flex;
+		align-items: center;
+		height: 100%;
 	}
 	input {
-		margin-bottom: 0 !important;
+		margin-bottom: 0;
 	}
 }

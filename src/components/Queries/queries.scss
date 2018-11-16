@@ -1,0 +1,28 @@
+.Collection {
+	margin: 0;
+}
+
+.SelectContainer {
+	height: 100%;
+
+	* {
+		height: 100% !important;
+	}
+}
+
+.Select {
+	* {
+		display: flex;
+		align-items: center;
+	}
+
+	div,
+	span {
+		margin: 0 !important;
+	}
+
+	input {
+		box-shadow: none !important;
+		margin: 0 !important;
+	}
+}
