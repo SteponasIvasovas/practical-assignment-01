@@ -1,0 +1,40 @@
+.Container {
+	--spacing: 20px;
+	display: grid;
+	grid-template-columns: var(--spacing) 5fr var(--spacing) 2fr var(--spacing);
+	grid-template-rows: var(--spacing) 60px var(--spacing) 1fr var(--spacing);
+	grid-template-areas:
+		'. . . . .'
+		'. search . controls .'
+		'. . . . .'
+		'. gallery . queries .'
+		'. . . . .';
+	background-color: grey;
+	height: 100vh;
+}
+
+.Search {
+	grid-area: search;
+	background-color: blue;
+}
+
+.Controls {
+	grid-area: controls;
+	background-color: red;
+}
+
+.SaveButton {
+}
+
+.SearchButton {
+}
+
+.Gallery {
+	grid-area: gallery;
+	background-color: green;
+}
+
+.Queries {
+	grid-area: queries;
+	background-color: yellow;
+}

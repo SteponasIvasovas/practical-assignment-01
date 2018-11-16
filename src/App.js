@@ -1,8 +1,9 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
+import Layout from './components/Layout/Layout.js';
 
 const App = () => {
-	return <div>App is ok</div>;
+	return <Layout />;
 };
 
-export default hot(module)(App);
+export default App;

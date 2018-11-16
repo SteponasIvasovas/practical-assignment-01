@@ -17,7 +17,7 @@ module.exports = {
 			{
 				test: /\.(js|jsx)$/,
 				exclude: /(node_modules)/,
-				loader: 'babel-loader',
+				loader: require.resolve('babel-loader'),
 				options: {
 					// This is a feature of `babel-loader` for webpack (not Babel itself).
 					// It enables caching results in ./node_modules/.cache/babel-loader/
@@ -28,21 +28,21 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: ['style-loader', 'css-loader'],
+				use: [require.resolve('style-loader'), require.resolve('css-loader')],
 			},
 			{
 				test: /\.scss$/,
 				use: [
-					'style-loader',
+					require.resolve('style-loader'),
 					{
-						loader: 'css-loader',
+						loader: require.resolve('css-loader'),
 						options: {
 							importLoaders: 1,
 							modules: true,
-							localIdentName: '[name]_[local]_[hash:base54:5]',
+							localIdentName: '[name]_[local]_[hash:base64:5]',
 						},
 					},
-					'sass-loader',
+					require.resolve('sass-loader'),
 				],
 			},
 		],
