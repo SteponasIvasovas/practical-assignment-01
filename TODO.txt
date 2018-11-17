@@ -1,1 +1,5 @@
 1. Setup redux store (postponed)
+2. Add favicon
+3. Use masonry
+4. Normalized state
+5. Queries

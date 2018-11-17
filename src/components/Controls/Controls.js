@@ -5,7 +5,7 @@ const Controls = () => {
 	return (
 		<div className={`${classes.Controls} grid-controls`}>
 			<a className="grid-search-button waves-effect waves-light btn-large">Search</a>
-			<a className="grid-save-button waves-effect waves-light btn-large">Save</a>
+			<a className="grid-save-button waves-effect waves-light green lighten-1 btn-large">Save</a>
 		</div>
 	);
 };

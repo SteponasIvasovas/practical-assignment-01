@@ -1,5 +1,11 @@
+.CollectionContainer {
+}
+
 .Collection {
 	margin: 0;
+	li {
+		word-break: break-word;
+	}
 }
 
 .SelectContainer {

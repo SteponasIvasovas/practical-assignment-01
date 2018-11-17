@@ -8,12 +8,12 @@ const Queries = () => {
 			<div className={`${classes.SelectContainer} grid-queries-select`}>
 				<Select className={`${classes.Select}`} />
 			</div>
-			<div className="grid-queries-list">
+			<div className={`${classes.CollectionContainer} grid-queries-list`}>
 				<ul className={`${classes.Collection} collection`}>
 					<li className="collection-item">Placeholder</li>
 					<li className="collection-item">Placeholder</li>
 					<li className="collection-item">Placeholder</li>
-					<li className="collection-item">Placeholder</li>
+					<li className="collection-item">Loooooooooooooooooooooooooooooooooooooong placeholder</li>
 					<li className="collection-item">Placeholder</li>
 					<li className="collection-item">Placeholder</li>
 					<li className="collection-item">Placeholder</li>
