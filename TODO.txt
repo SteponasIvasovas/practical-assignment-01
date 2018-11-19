@@ -1,5 +1,11 @@
-1. Setup redux store (postponed)
+1. Setup redux store +
 2. Add favicon
-3. Use masonry
-4. Normalized state
-5. Queries
+3. Use masonry +
+4. Normalized state +
+5. Queries +
+6. Full image modal +
+7. Error modal
+8. Save query +
+9. Clear search input +
+10. Uppercase generate queryName +
+11. Delete saved query +

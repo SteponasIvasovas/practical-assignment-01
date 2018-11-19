@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import imagesReducer from './reducers/images';
 import { watchQuery } from './sagas';
@@ -8,9 +9,10 @@ const rootReducer = combineReducers({
 	[DATA_TYPE_IMAGES]: imagesReducer,
 });
 
+const loggerMiddleware = createLogger();
 const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware, loggerMiddleware));
 
 sagaMiddleware.run(watchQuery);
 

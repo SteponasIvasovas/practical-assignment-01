@@ -1,4 +1,14 @@
-.Gallery {
-	margin: 0;
-	height: 100%;
+.GalleryItem {
+	padding: 10px;
+}
+
+@media screen and (max-width: 752px) {
+	.GalleryItem {
+		max-width: 50% !important;
+	}
+}
+
+.LoadButtonContainer {
+	width: 100%;
+	padding: 10px 0;
 }

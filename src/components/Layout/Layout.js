@@ -7,9 +7,15 @@ import Queries from './../Queries/Queries.js';
 const Layout = () => {
 	return (
 		<div className="grid-container">
-			<Top />
-			<Gallery />
-			<Queries />
+			<div className="grid-top">
+				<Top />
+			</div>
+			<div className="grid-gallery">
+				<Gallery />
+			</div>
+			<div className="grid-queries">
+				<Queries />
+			</div>
 		</div>
 	);
 };

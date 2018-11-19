@@ -1,5 +1,8 @@
 body {
-	background-color: rgba(123, 223, 212, 0.1);
+	background: #aa4b6b; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 	margin: 0;
 	padding: 0;
 }
@@ -16,11 +19,22 @@ body *::-webkit-scrollbar {
 
 body *::-webkit-scrollbar-thumb {
 	border-radius: 16px;
-	background-color: rgba(0, 0, 0, 0.25);
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 body *:hover::-webkit-scrollbar-thumb {
-	background-color: rgba(0, 0, 0, 0.35);
+	background-color: rgba(255, 255, 255, 0.65);
+}
+
+.full-stretch {
+	height: 100%;
+	width: 100%;
+}
+
+.content-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .grid-container {
@@ -53,14 +67,11 @@ body *:hover::-webkit-scrollbar-thumb {
 
 .grid-gallery {
 	grid-area: gallery;
+	overflow-y: scroll;
 }
 
 .grid-queries {
 	grid-area: queries;
-}
-
-.grid-queries-select {
-	display: none;
 }
 
 .grid-queries-list {
@@ -96,7 +107,7 @@ body *:hover::-webkit-scrollbar-thumb {
 			var(--spacing)
 			calc(var(--spacing) + var(--input-height) * 2)
 			var(--spacing)
-			var(--input-height)
+			calc(var(--input-height) * 2)
 			var(--spacing)
 			1fr
 			var(--spacing);
@@ -121,9 +132,6 @@ body *:hover::-webkit-scrollbar-thumb {
 			'controls';
 	}
 	.grid-queries-list {
-		display: none;
-	}
-	.grid-queries-select {
-		display: block;
+		height: 100%;
 	}
 }
