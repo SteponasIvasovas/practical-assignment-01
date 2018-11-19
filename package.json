@@ -3,7 +3,9 @@
 	"version": "1.0.0",
 	"description": "Simple image fetching app",
 	"scripts": {
-		"start": "nodemon"
+		"start": "webpack-dev-server --config webpack.config.dev.js",
+		"build": "webpack --config webpack.config.prod.js",
+		"heroku-postbuild": "npm run build"
 	},
 	"author": "Stepas",
 	"license": "ISC",
