@@ -9,7 +9,7 @@ To run this project node.js and npm is required
 1.  Clone this repository
 2.  Execute "npm install".
 
-##Running project locally
+## Running project locally
 
 1. Execute "npm start"
 2. Open up http://localhost:3500 in your browser
