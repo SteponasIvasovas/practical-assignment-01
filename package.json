@@ -2,11 +2,12 @@
 	"name": "practical-assignment-01",
 	"version": "1.0.0",
 	"description": "Simple image fetching app",
+	"homepage": "http://SteponasIvasovas.github.io/practical-assignment-01/build",
 	"scripts": {
 		"start": "nodemon",
 		"build": "webpack --config webpack.config.prod.js",
 		"predeply": "npm run build",
-		"deploy": "gh-pages -d build"
+		"deploy": "npm run build&gh-pages -d build"
 	},
 	"author": "Stepas",
 	"license": "ISC",
