@@ -1,10 +1,23 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
 	mode: 'production',
 	entry: path.resolve(__dirname, 'src/index.js'),
+	optimization: {
+		minimizer: [
+			new UglifyJsPlugin({
+				cache: true,
+				parallel: true,
+				sourceMap: true,
+			}),
+			new OptimizeCSSAssetsPlugin({}),
+		],
+	},
 	output: {
 		path: path.join(__dirname, 'build'),
 		publicPath: '/',
@@ -54,6 +67,10 @@ module.exports = {
 			title: 'Mediapark practical assignment',
 			minify: true,
 			inject: 'body',
+		}),
+		new MiniCssExtractPlugin({
+			filename: '[name].css',
+			chunkFilename: '[id].css',
 		}),
 	],
 };
