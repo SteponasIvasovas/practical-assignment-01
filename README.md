@@ -11,7 +11,7 @@ To run this project node.js and npm is required
 
 ## Running project locally
 
-1. Execute "npm start"
+1. Execute "npm run dev"
 2. Open up http://localhost:3500 in your browser
 
 ## Description
