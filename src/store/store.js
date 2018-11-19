@@ -9,10 +9,11 @@ const rootReducer = combineReducers({
 	[DATA_TYPE_IMAGES]: imagesReducer,
 });
 
-const loggerMiddleware = createLogger();
+// const loggerMiddleware = createLogger();
 const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore(rootReducer, applyMiddleware(sagaMiddleware, loggerMiddleware));
+// const store = createStore(rootReducer, applyMiddleware(sagaMiddleware, loggerMiddleware));
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
 sagaMiddleware.run(watchQuery);
 
